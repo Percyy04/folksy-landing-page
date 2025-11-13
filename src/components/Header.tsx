@@ -36,8 +36,8 @@ export const Header = () => {
             <a href="/ve-chung-toi" className="text-sm font-medium hover:text-primary transition-colors">
               Về Chúng Tôi
             </a>
-            <a href="/san-pham" className="text-sm font-medium hover:text-primary transition-colors">
-              Sản phẩm
+            <a href="/shop" className="text-sm font-medium hover:text-primary transition-colors">
+              Shop
             </a>
             <a href="/gift-set" className="text-sm font-medium hover:text-primary transition-colors">
               Gift Set
@@ -90,8 +90,8 @@ export const Header = () => {
             <a href="/ve-chung-toi" className="block py-2 text-sm font-medium hover:text-primary transition-colors">
               Về Chúng Tôi
             </a>
-            <a href="/san-pham" className="block py-2 text-sm font-medium hover:text-primary transition-colors">
-              Sản phẩm
+            <a href="/shop" className="block py-2 text-sm font-medium hover:text-primary transition-colors">
+              Shop
             </a>
             <a href="/gift-set" className="block py-2 text-sm font-medium hover:text-primary transition-colors">
               Gift Set
