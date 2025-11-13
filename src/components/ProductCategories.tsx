@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import productScarves from "@/assets/product-scarves.jpg";
 import productGiftset from "@/assets/product-giftset.jpg";
 import productCustom from "@/assets/product-custom.jpg";
@@ -9,21 +10,21 @@ const categories = [
     title: "Khăn Hoạ Tiết",
     description: "Chúng tôi giới thiệu những câu chuyện của Việt Nam thông qua các mẫu thiết kế áp dụng trên khăn lụa.",
     image: productScarves,
-    link: "/shop",
+    link: "/product/khan-hoa-tiet-lotus",
     buttonText: "Mua Sắm"
   },
   {
     title: "Gift Sets",
     description: "Bạn đang tìm kiếm một món quà thực sự độc đáo? Hãy ghé xem bộ sưu tập các set quà tặng của chúng tôi.",
     image: productGiftset,
-    link: "/gift-sets",
+    link: "/product/gift-set-tet",
     buttonText: "Xem thêm"
   },
   {
     title: "Thiết Kế Riêng",
     description: "Thiết kế riêng logo thương hiệu hoặc lời chúc cá nhân lên khăn - quà tặng ý nghĩa cho cá nhân và doanh nghiệp.",
     image: productCustom,
-    link: "/custom-design",
+    link: "/product/thiet-ke-rieng",
     buttonText: "Mua Sắm"
   }
 ];
@@ -64,13 +65,15 @@ export const ProductCategories = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {category.description}
                 </p>
-                <Button 
-                  variant="outline" 
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all"
-                >
-                  {category.buttonText}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to={category.link}>
+                  <Button 
+                    variant="outline" 
+                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all"
+                  >
+                    {category.buttonText}
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}
